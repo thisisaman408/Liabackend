@@ -31,7 +31,7 @@ app.add_middleware(
 
 
 
-from backend.engine import ContentAwareLinguisticEngine, VaderSentimentEngine
+from engine import ContentAwareLinguisticEngine, VaderSentimentEngine
 sentiment_engine = ContentAwareLinguisticEngine()
 print("Using Content-Aware Linguistic Engine (Hybrid VADER + PhD Heuristics)")
 

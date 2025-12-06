@@ -1,5 +1,5 @@
 import pytest
-from backend.engine import VaderSentimentEngine
+from engine import VaderSentimentEngine
 
 def test_analyze_message_positive():
     engine = VaderSentimentEngine()
