@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String, Float, DateTime, ForeignKey, Text, JSON
 from sqlalchemy.orm import relationship
-from backend.database import Base
+from database import Base
 from pydantic import BaseModel
 from typing import List, Optional
 from datetime import datetime
