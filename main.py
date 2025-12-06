@@ -23,7 +23,12 @@ app = FastAPI(title="Conversational Sentiment Chatbot")
 # CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://liafrontend-five.vercel.app", "http://localhost:5173", "*"], 
+    allow_origins=[
+        "https://liafrontend-five.vercel.app", 
+        "https://liabackend.onrender.com",
+        "http://localhost:5173", 
+        "*"
+    ], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
