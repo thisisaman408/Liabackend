@@ -8,21 +8,22 @@ from dotenv import load_dotenv
 
 env_path = os.path.join(os.path.dirname(__file__), ".env")
 load_dotenv(env_path)
-from backend.models import ChatRequest, ChatResponse
-from backend.engine import ContentAwareLinguisticEngine, VaderSentimentEngine
-from backend.storage import Storage
-from backend.orchestrator import ChatbotOrchestrator
-from backend.database import init_db
+from models import ChatRequest, ChatResponse
+from engine import ContentAwareLinguisticEngine, VaderSentimentEngine
+from storage import Storage
+from orchestrator import ChatbotOrchestrator
+from database import init_db
 
 
+# Initialize Database (SRP: Delegated to database module)
 init_db()
 
 app = FastAPI(title="Conversational Sentiment Chatbot")
 
-
+# CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  
+    allow_origins=["https://liafrontend-five.vercel.app", "http://localhost:5173", "*"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

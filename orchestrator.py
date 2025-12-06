@@ -1,9 +1,9 @@
 import uuid
 import os
 from datetime import datetime
-from backend.models import Message, ChatResponse
-from backend.engine import SentimentEngine
-from backend.storage import Storage
+from models import Message, ChatResponse
+from engine import SentimentEngine
+from storage import Storage
 from groq import Groq
 
 class ChatbotOrchestrator:

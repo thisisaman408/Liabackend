@@ -1,6 +1,6 @@
 from typing import Dict, List, Optional
-from backend.models import Conversation, Message, DBConversation, DBMessage
-from backend.database import SessionLocal
+from models import Conversation, Message, DBConversation, DBMessage
+from database import SessionLocal
 
 class Storage:
     def __init__(self):
